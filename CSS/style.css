@@ -1,0 +1,555 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F5F5DC;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 25px;
+    position: sticky; 
+    top: 0;
+    background: #F5F5DC;
+    z-index: 100;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0);
+}
+
+.logo img {
+    max-width: 11rem; 
+    min-height: 1rem; 
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    padding: 25px;
+    font-size: 16px;
+    transition: color 150ms ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+    text-decoration: overline;
+}
+
+.hero {
+    height: 100vh;
+    background: url('../IMG/room3.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1{
+    font-weight: bolder;
+    font-size: 3.5rem;
+}
+
+.hero-content p{
+    font-size: 1.3rem;
+}
+
+.cta-button{
+    color: #FFD700;
+    font-size: large;
+}
+
+.cta-button:hover{
+    color: blue;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.about-container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 40px;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 1; 
+    max-width: 40%;
+    line-height: 30px;
+}
+
+.about-text p{
+    font-size: 17px;
+}
+
+.about-text h2{
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.about-image {
+    flex: 1; 
+}
+
+.about-image img {
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.rooms-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.rooms-section h2 {
+    width: 100%;
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.room-card {
+    flex: 1 1 calc(33.333% - 30px);
+    margin: 15px;
+    text-align: left;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.room-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.room-card h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.room-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.room-card .book-now {
+    background-color: #FFD700;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.room-card .book-now:hover {
+    background-color: #daa520;
+}
+
+.dining-section {
+    text-align: center; 
+    padding: 50px 20px; 
+    background-color: #f5f5dc; 
+}
+
+.dining-section h2 {
+    font-size: 36px; 
+    margin-bottom: 20px; 
+}
+
+.dining-section img {
+    max-width: 80%; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+}
+
+.dining-section p {
+    font-size: 17px;
+    margin-bottom: 20px; 
+    line-height: 1.6; 
+}
+
+.dining-section h3 {
+    font-size: 22px; 
+    margin: 20px 0; 
+}
+
+.dining-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dining-section li {
+    font-size: 16px; 
+    margin: 10px 0; 
+}
+
+.reservation-button {
+    background-color: #FFD700;
+    color: white; 
+    padding: 10px 20px;
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+}
+
+.reservation-button:hover {
+    background-color: #daa520; 
+}
+
+.wellness-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.wellness-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.spa, .gym {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 800px; 
+    overflow: hidden;
+}
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    width: 80%;
+    margin: 0 auto;
+    left: 10%;
+    opacity: 0;
+    animation: slideShow 15s infinite;
+    border-radius: 10px;
+}
+
+.carousel img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.carousel img:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.carousel img:nth-child(3) {
+    animation-delay: 10s;
+}
+
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.spa h3, .gym h3 {
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.spa p, .gym p {
+    margin-bottom: 15px;
+}
+
+.book-now {
+    background-color: #FFD700;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.book-now:hover {
+    background-color: #daa520;
+}
+
+.contact-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #FFD700;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #daa520;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .footer-content img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #FFD700;
+}
+
+.social-icon {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px; 
+    color: #333; 
+}
+
+.social-icon:hover {
+    color: #FFD700;
+}
+
+.back{
+    color: #fff;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.back:hover {
+    color: #FFD700;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .room-card {
+        flex: 1 1 calc(50% - 30px);
+    }
+}
+
+@media (max-width: 480px) {
+    .room-card {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+.cta-button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #FFD700;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.book-now {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #FFD700;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none; 
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .nav-active ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 40vh;
+        background-color: rgba(255, 255, 255, 0.9); 
+        text-align: center;
+        line-height: 40px;
+        color: black;
+    }
+
+    nav ul li a {
+        padding: 15px 0;
+        color: #333;
+    }
+
+    
+.hero-content h1{
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.hero-content p{
+    font-size: 1.2rem;
+}
+
+.logo img {
+    max-width: 9rem; 
+    min-height: 1rem; 
+}
+
+.about-container {
+    flex-direction: column;
+}
+.about-text {
+    margin-right: 0;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+
+.about-text h2{
+    padding: 20px;
+    font-size: 25px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 70%;
+}
+
+.about-image{
+    min-width: 100dvw;
+}
+
+.dining-section img {
+    max-width: 100%;
+}
+
+.dining-section p {
+    font-size: 18px; 
+}
+
+.dining-section h3 {
+    font-size: 24px;
+}
+
+.carousel img {
+    width: 100%;
+    left: 0;
+}
+
+.carousel {
+    height: 250px;
+}
+
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .carousel {
+        height: 400px;
+    }
+
+    nav ul li a {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
